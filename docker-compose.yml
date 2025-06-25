@@ -1,0 +1,12 @@
+#docker-compose up -d câu lệnh chạy docker trên cmd
+services:
+  redis:
+    image: redis:8.0-M03-alpine
+    container_name: redisUserManagement #tên conatiner là redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - cache:/data
+volumes:
+  cache:
+    driver: local

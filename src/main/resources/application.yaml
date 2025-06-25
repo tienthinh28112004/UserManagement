@@ -1,0 +1,45 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: UserManagement
+  datasource:
+    url: jdbc:mysql://localhost:3306/UserManagement
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: admin
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: tienthinh28112004@gmail.com
+    password: afnr svcz spqj qlqg
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  data:
+    redis:
+      port: 6379
+      host: localhost
+app:
+  secret: "fK?FbptqtbFl2i4YTWetBFL6BXk!ugExeZ5/=4Fl6HK!M8qzjfLTnf2RLo5dZ-j9"
+  jwt:
+    token:
+      expires-in: 3600000 # 60 minutes in milliseconds
+    refresh-token:
+      expires-in: 86400000 # 24 hours in milliseconds
+  registration:
+    email:
+      token:
+        expires-in: 300000 # 5 phút
+cloudinary:
+  cloud-name: "dcuhpodqw"
+  api-key: "469646197951194"
+  api-secret: "CC7K_qhEmJUQ4Ji-DTF5hIvEUMI"
